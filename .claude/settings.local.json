@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(g++ --version 2>&1)",
+      "PowerShell(clang++ --version 2>&1)",
+      "PowerShell(cl.exe 2>&1)",
+      "PowerShell(if \\($?\\) { \"---\" })",
+      "Read(//c/Users/28115/mingw64/**)",
+      "PowerShell(try { $result = Invoke-RestMethod -Uri \"https://api.github.com/repos/brechtsanders/winlibs_mingw/releases/tags/14.2.0posix-18.1.8-12.0.0-ucrt-r1\" -ErrorAction Stop; $result.assets | Select-Object name, browser_download_url | Format-Table -Wrap } catch { Write-Output \"API failed: $_\" })",
+      "PowerShell(gcc --version 2>&1)",
+      "Read(//c/Windows/System32/**)",
+      "PowerShell([Environment]::GetEnvironmentVariable\\(\"Path\", \"Machine\"\\) -split ';' | Select-String \"System32\")",
+      "PowerShell(if \\(Test-Path \"$env:USERPROFILE\\\\.vscode\\\\settings.json\"\\) { Get-Content \"$env:USERPROFILE\\\\.vscode\\\\settings.json\" -Raw } else { Write-Output \"No user settings\" })",
+      "PowerShell(Write-Output \"ComSpec: $env:ComSpec\"; Get-ItemProperty \"HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\Environment\" -Name \"ComSpec\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\Code\\\\User\\\\settings.json\" -ErrorAction SilentlyContinue; if \\(Test-Path \"$env:APPDATA\\\\Code\\\\User\\\\settings.json\"\\) { Get-Content \"$env:APPDATA\\\\Code\\\\User\\\\settings.json\" -Raw | Select-Object -First 50 } else { Write-Output \"No VS Code settings at AppData\" })",
+      "PowerShell(& \"C:\\\\Users\\\\28115\\\\mingw64\\\\mingw64\\\\bin\\\\g++.exe\" -fdiagnostics-color=always -g \"D:\\\\���Թܼ�Ǩ���ļ�\\\\claude code\\\\hello_world.cpp\" -o \"D:\\\\���Թܼ�Ǩ���ļ�\\\\claude code\\\\hello_world.exe\")",
+      "PowerShell(& \"C:\\\\Users\\\\28115\\\\mingw64\\\\mingw64\\\\bin\\\\g++.exe\" -fdiagnostics-color=always -g $source -o $output)",
+      "PowerShell($source = \"D:\\\\���Թܼ�Ǩ���ļ�\\\\claude code\\\\hello_world.cpp\")",
+      "PowerShell($output = \"D:\\\\hello_world.exe\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\28115\\mingw64"
+    ]
+  }
+}
