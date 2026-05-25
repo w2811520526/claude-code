@@ -1,2 +1,2 @@
 print("Hello World")
-print("从 feature 分支来的！")
+print("从 feature 分支合并的！")
