@@ -6,5 +6,6 @@ public class HelloWorld {
         int b=in.nextInt();
         int c=a+b;
         System.out.println(c);
+        in.close();
     }
 }
